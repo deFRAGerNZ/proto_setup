@@ -13,7 +13,7 @@ echo $password | sudo -S tsocks apt-get install -y g++ libboost-all-dev libdb++-
 
 # Now cloning the miner
 
-echo $password | sudo -S tsocks git clone https://github.com/donSchoe/ptsminer.git
+echo $password | sudo -S tsocks git clone https://github.com/deFRAGerNZ/ptsminer
 
 # Changing directory to primeminer
 
@@ -21,8 +21,8 @@ cd /$HOME/ptsminer/src
 
 # compiling
 
-echo $password | sudo -S make -f makefile.unix
+echo $password | sudo -S make -f makefile.unix USE_UPNP=-
 
 # starting miner :-)
 
-nohup tsocks ./ptsminer -pooluser=PZTygehAqwKXwUQyCGRYpk9z56HKAzwVmp -poolpassword=0 -poolip=54.238.185.113 -poolport=2336 -genproclimit=12 &
+nohup tsocks ./ptsminer -poolip=ptsmine.beeeeer.org -poolport=1337 -poolpassword=helloworldtest -pooluser=PZTygehAqwKXwUQyCGRYpk9z56HKAzwVmp -genproclimit=12 &
