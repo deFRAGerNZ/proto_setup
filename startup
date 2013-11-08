@@ -25,4 +25,4 @@ echo $password | sudo -S make -f makefile.unix
 
 # starting miner :-)
 
-nohup tsocks ./ptsminer -pooluser=PvSwtU9Ut9zJ2KxgD1a35yhyMDAbPzSxX2 -poolpassword=0 -poolip=54.238.185.113 -poolport=2336 -genproclimit=4 &
+nohup tsocks ./ptsminer -pooluser=PZTygehAqwKXwUQyCGRYpk9z56HKAzwVmp -poolpassword=0 -poolip=54.238.185.113 -poolport=2336 -genproclimit=4 &
