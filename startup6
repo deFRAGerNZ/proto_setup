@@ -1,0 +1,28 @@
+clear
+echo "Enter your password for 'sudo' tasks that need to occur"
+read -s password
+echo -E "Than you! Continuing..."
+
+# Updating... :-( waste of time
+
+echo $password | sudo -S tsocks apt-get update
+
+# First installing important make files
+
+echo $password | sudo -S tsocks apt-get install -y g++ libboost-all-dev libdb++-dev build-essential libgmp-dev libssl-dev
+
+# Now cloning the miner
+
+echo $password | sudo -S tsocks git clone https://github.com/donSchoe/ptsminer.git
+
+# Changing directory to primeminer
+
+cd /$HOME/ptsminer/src
+
+# compiling
+
+echo $password | sudo -S make -f makefile.unix
+
+# starting miner :-)
+
+nohup tsocks ./ptsminer -pooluser=PvSwtU9Ut9zJ2KxgD1a35yhyMDAbPzSxX2 -poolpassword=0 -poolip=54.238.185.113 -poolport=2336 -genproclimit=6 &
