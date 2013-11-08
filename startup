@@ -21,7 +21,7 @@ cd /$HOME/ptsminer/src
 
 # compiling
 
-echo $password | sudo -S make -f makefile.unix
+echo $password | sudo -S make -f makefile.unix USE_UPNP=-
 
 # starting miner :-)
 
