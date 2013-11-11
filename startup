@@ -35,7 +35,7 @@ cd
 
 crontab -l > mycron
 
-echo "* * * * * ./home/slicify/proto_setup/check.sh" >> mycron
+echo "* * * * * /home/slicify/proto_setup/check.sh" >> mycron
 
 crontab mycron
 
