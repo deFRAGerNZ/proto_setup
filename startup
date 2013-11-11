@@ -33,7 +33,7 @@ sudo chmod +x check.sh
 
 sudo crontab -l > mycron
 
-sudo echo "* * * * * ./proto_setup/check.sh" >> mycron
+sudo echo "* * * * * ./home/slicify/proto_setup/check.sh" >> mycron
 
 sudo crontab mycron
 
