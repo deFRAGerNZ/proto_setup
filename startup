@@ -31,10 +31,12 @@ cd /$HOME/proto_setup
 
 sudo chmod +x check.sh
 
-sudo crontab -l > mycron
+cd
 
-sudo echo "* * * * * ./home/slicify/proto_setup/check.sh" >> mycron
+crontab -l > mycron
 
-sudo crontab mycron
+echo "* * * * * ./home/slicify/proto_setup/check.sh" >> mycron
+
+crontab mycron
 
 sudo rm mycron
