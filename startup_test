@@ -29,4 +29,4 @@ cd /$HOME/proto_setup
 
 sudo chmod +x watchdog.sh
 
-nohup watchdog.sh &
+nohup ./watchdog.sh &
