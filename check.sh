@@ -1,3 +1,4 @@
+#!/bin/bash
 if ps aux | pgrep -f 'ptsminer' > /dev/null
 then
 echo "Looking good"
